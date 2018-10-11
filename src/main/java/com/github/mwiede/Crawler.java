@@ -96,7 +96,7 @@ public class Crawler {
 
     private static Set<String> findLibraries(final WebPage webPage) {
         System.out.println(Thread.currentThread().getName() + " findLibs in " + webPage.getUrl());
-        final Matcher matcher = Pattern.compile("([^/^'^\"^\\s]+\\.js)").matcher(webPage.getContent());
+        final Matcher matcher = Pattern.compile("([\\.\\w\\d+_-]+\\.js)[^\\w]+").matcher(webPage.getContent());
         final Set<String> libraries = new HashSet<>();
         while (matcher.find()) {
             final String libraryName = matcher.group(1);
