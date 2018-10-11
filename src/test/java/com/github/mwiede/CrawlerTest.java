@@ -31,7 +31,7 @@ public class CrawlerTest {
                                 + "/url?q=http://webpage3.com&amp......." //
                                 + "/url?q=http://webpage4.com&amp....");
             } else {
-                return new WebPage(url, " 'lib1.js' \"lib2.js\" xyz lib3.js");
+                return new WebPage(url, " 'lib1.js' \"lib2.js\" xyz path/to/lib3.js ");
             }
 
         });
